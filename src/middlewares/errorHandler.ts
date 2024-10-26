@@ -1,5 +1,5 @@
+import { ErrorResponse } from '../types/ErrorResponse';
 import { NextFunction, Request, Response } from 'express';
-import { ErrorResponse } from 'src/types/ErrorResponse';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function errorHandler(

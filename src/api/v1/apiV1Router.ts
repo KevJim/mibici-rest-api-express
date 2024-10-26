@@ -1,5 +1,5 @@
+import { mibiciApiRouter } from './mibiciApi/utils/mibiciApiRouter';
 import express from 'express';
-import { mibiciApiRouter } from 'src/api/v1/mibiciApi/utils/mibiciApiRouter';
 
 export function apiV1Router(app: any): void {
     const router = express.Router();

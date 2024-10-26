@@ -1,4 +1,4 @@
-import { findNearStations } from 'src/modules/stations/functions/findNearStations';
+import { findNearStations } from '../../../modules/stations/functions/findNearStations';
 
 export async function findNearStationsApi(req: any, res: any): Promise<void> {
     try {
