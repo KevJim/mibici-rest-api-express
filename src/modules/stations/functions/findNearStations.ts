@@ -1,4 +1,4 @@
-import { findNearStationsByLatitudeAndLongitudeAndDistance } from '../../../database/station/findNearStationsByLatitudeAndLongitudeAndDistance';
+import { findNearStationsByLatitudeAndLongitudeAndDistance } from 'src/database/station/findNearStationsByLatitudeAndLongitudeAndDistance';
 
 export async function findNearStations(params: Params): Promise<Array<StationViewModel>> {
     const stations = await findNearStationsByLatitudeAndLongitudeAndDistance(params);

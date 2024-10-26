@@ -1,8 +1,8 @@
-import { Station } from '../../types/Station';
-import { convertKilometersToMeters } from '../../utils/distance/convertKilometersToMeters';
-import { readStationsFromCSV } from './utils/readStationsFromCSV';
 import { isPointWithinRadius } from 'geolib';
 import path from 'path';
+import { readStationsFromCSV } from 'src/database/station/utils/readStationsFromCSV';
+import { Station } from 'src/types/Station';
+import { convertKilometersToMeters } from 'src/utils/distance/convertKilometersToMeters';
 
 /*
 Here should be the logic to find in database but for learning purposes

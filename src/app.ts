@@ -1,11 +1,11 @@
-import { apiV1Router } from './api/v1/apiV1Router';
-import { errorHandler } from './middlewares/errorHandler';
-import { notFound } from './middlewares/notFound';
-import { MessageResponse } from './types/MessageResponse';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import { apiV1Router } from 'src/api/v1/apiV1Router';
+import { errorHandler } from 'src/middlewares/errorHandler';
+import { notFound } from 'src/middlewares/notFound';
+import { MessageResponse } from 'src/types/MessageResponse';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
