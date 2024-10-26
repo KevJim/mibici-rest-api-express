@@ -1,10 +1,10 @@
+import { Station } from '../../../types/Station';
 import csv from 'csv-parser';
 import fs from 'fs';
-import { Station } from 'src/types/Station';
 
 export async function readStationsFromCSV(filePath: string): Promise<Array<Station>> {
     return new Promise((resolve, reject) => {
-        const stations: Array<Station> = [];
+        const stations: Station[] = [];
 
         const stream = fs.createReadStream(filePath);
 

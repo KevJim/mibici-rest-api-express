@@ -1,4 +1,4 @@
-import { MessageResponse } from 'src/types/MessageResponse';
+import { MessageResponse } from './MessageResponse';
 
 export type ErrorResponse = MessageResponse & {
     stack?: string;
