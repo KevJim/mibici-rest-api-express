@@ -1,46 +1,27 @@
-# Express API Starter with Typescript
+# mibici-rest-api-express
 
-This repo is based on [w3cj/express-api-starter](https://github.com/w3cj/express-api-starter.git)
-repo, all credits are for him. Just adding other plugins to sort imports and change folders structure
+A REST API to find nearby stations using public data from [mibici](https://www.mibici.net/es/datos-abiertos/). This API was built using express, typescript and deployed to [VERCEL](https://vercel.com/docs/functions) as a serverless function.
 
-Includes API Server utilities:
+The startup template is based on the [w3cj/express-api-starter](https://github.com/w3cj/express-api-starter.git) repository. All credit goes to the author.
 
--   [morgan](https://www.npmjs.com/package/morgan)
-    -   HTTP request logger middleware for node.js
--   [helmet](https://www.npmjs.com/package/helmet)
-    -   Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
--   [dotenv](https://www.npmjs.com/package/dotenv)
-    -   Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
--   [cors](https://www.npmjs.com/package/cors)
-    -   CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+## Getting Started
 
-Development utilities:
+1. Clone the repository:
 
--   [typescript](https://www.npmjs.com/package/typescript)
-    -   TypeScript is a language for application-scale JavaScript.
--   [ts-node](https://www.npmjs.com/package/ts-node)
-    -   TypeScript execution and REPL for node.js, with source map and native ESM support.
--   [nodemon](https://www.npmjs.com/package/nodemon)
-    -   nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
--   [eslint](https://www.npmjs.com/package/eslint)
-    -   ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
--   [typescript-eslint](https://typescript-eslint.io/)
-    -   Tooling which enables ESLint to support TypeScript.
--   [jest](https://www.npmjs.com/package/jest)
-    -   Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
--   [supertest](https://www.npmjs.com/package/supertest)
-    -   HTTP assertions made easy via superagent.
+```
+git clone https://github.com/KevJim/mibici-rest-api-express.git
+```
 
-## Setup
+2. Install dependencies (you need at least Node v20.11.0):
 
 ```
 npm install
 ```
 
-## Lint
+3. Start the development server:
 
 ```
-npm run lint
+npm run dev
 ```
 
 ## Test
@@ -49,8 +30,31 @@ npm run lint
 npm run test
 ```
 
-## Development
+## Usage/Examples
 
+You can use the following command to see an example of how to use the API:
+
+```shell
+curl -X GET "https://mibici-rest-api-express.vercel.app/api/v1/mibici/stations?latitude=20.666378&longitude=-103.34882&distance=2" -H "Content-Type: application/json"
 ```
-npm run dev
+
+The response should look like this:
+
+```json
+{
+    "stations": [
+        {
+            "id": "2",
+            "name": "(GDL-001) C. Epigmenio Glez./ Av. 16 de Sept.",
+            "location": "POL�GONO CENTRAL",
+            "latitude": 20.666378,
+            "longitude": -103.34882,
+            "status": "IN_SERVICE"
+        }
+    ]
+}
 ```
+
+## Authors
+
+-   [@KevJim](https://github.com/KevJim)

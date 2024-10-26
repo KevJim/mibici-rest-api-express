@@ -1,7 +1,7 @@
 {
-    "name": "express-setup-template",
+    "name": "mibici-rest-api-express",
     "version": "1.0.0",
-    "description": " A basic starter for an express.js API with Typescript",
+    "description": "REST API about mibici using express, typescript",
     "main": "src/index.ts",
     "scripts": {
         "start": "ts-node src/index.ts",
@@ -17,7 +17,7 @@
     "author": "KevJim",
     "repository": {
         "type": "git",
-        "url": "https://github.com/KevJim/express-setup-template.git"
+        "url": "https://github.com/KevJim/mibici-rest-api-express.git"
     },
     "license": "MIT",
     "dependencies": {
